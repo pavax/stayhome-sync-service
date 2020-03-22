@@ -3,9 +3,28 @@
 
 ## Usage
 
+Curl:
+
     curl -X POST "http://localhost:8080/api/business-entry/" \
         -H "Content-Type: application/json" \
         -d "{ \"categories\": [ \"A\", \"B\" ], \"delivery\": \"Bern, Köniz, Wabern, Liebefeld\", \"description\": \"Lorem Ipsum\", \"email\": \"test@example.com\", \"id\": \"1234\", \"name\": \"test company\", \"phone\": \"\", \"providerName\": \"datasource-xy\", \"website\": \"http://www.example.com\", \"zipCode\": \"3000\"}"
+
+Json Model:
+
+    {
+      "categories": [
+        "string"
+      ],
+      "delivery": "string",
+      "description": "string",
+      "email": "string",
+      "id": "string",
+      "name": "string",
+      "phone": "string",
+      "providerName": "string",
+      "website": "string",
+      "zipCode": "string"
+    }
 
 ## Getting started
 
@@ -23,6 +42,6 @@
     cd stayhome-sync-service
     docker-compose -f docker-compose-local.yml up --build
     ```
- 
+
   
-3. Access the website at http://localhost:8080/swagger-ui.html.
+3. Access the api-documentation at http://localhost:8080/swagger-ui.html.

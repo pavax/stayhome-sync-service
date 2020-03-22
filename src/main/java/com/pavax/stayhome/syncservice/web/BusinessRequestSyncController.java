@@ -26,13 +26,13 @@ public class BusinessRequestSyncController {
 
 	@PostMapping("/")
 	public void upsert(@RequestBody @Validated BusinessEntryDto businessEntryDto) {
-		this.businessRequestSyncService.upsert(businessEntryDto);
+		this.businessRequestSyncService.sync(businessEntryDto);
 	}
 
 	@PostMapping("/_bulk")
 	public void bulkUpsert(@RequestBody @Validated BulkOperation bulkOperation) {
 		for (BusinessEntryDto entry : bulkOperation.entries) {
-			this.businessRequestSyncService.upsert(entry);
+			this.businessRequestSyncService.sync(entry);
 		}
 	}
 

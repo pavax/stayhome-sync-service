@@ -3,6 +3,7 @@ package com.pavax.stayhome.syncservice.infrastructure.feign;
 import java.util.List;
 
 import com.pavax.stayhome.syncservice.domain.BusinessRequest;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -14,6 +15,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 @ActiveProfiles("test")
+@Disabled("waiting for integration platform")
 class FeignBasedBusinessRepositoryTest {
 
 	@Autowired

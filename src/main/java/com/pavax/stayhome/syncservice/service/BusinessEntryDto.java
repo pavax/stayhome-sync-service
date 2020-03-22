@@ -29,14 +29,12 @@ public class BusinessEntryDto {
 	private String description;
 
 	@Pattern(regexp = "^[1-9][0-9][0-9][0-9]$")
-	@NotBlank
 	private String zipCode;
 
 	@Size(max = 255)
 	private String website;
 
-	@Pattern(regexp = "^(0|0041|\\+41)?[1-9\\s][0-9\\s]{1,12}$")
-	@Size(max = 255)
+	@Pattern(regexp = "|^(0|0041|\\+41)?[1-9\\s][0-9\\s]{1,12}$")
 	private String phone;
 
 	@Email

@@ -20,7 +20,7 @@ public class BusinessRequestSyncService {
 		this.postalCodeRepository = postalCodeRepository;
 	}
 
-	public void upsert(BusinessEntryDto businessEntryDto) {
+	public void sync(BusinessEntryDto businessEntryDto) {
 		final PostalCode postalCode = this.postalCodeRepository.getByZipCode(businessEntryDto.getZipCode());
 		final String correlationId = extractCorrelationId(businessEntryDto);
 		final BusinessRequest businessRequest = this.businessRequestRepository.findByCorrelationId(correlationId)

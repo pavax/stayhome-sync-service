@@ -6,6 +6,7 @@ import java.util.Optional;
 import com.pavax.stayhome.syncservice.domain.PostalCode;
 import com.pavax.stayhome.syncservice.domain.PostalCodeRepository;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -26,6 +27,7 @@ class DefaultPostalCodeRepository implements PostalCodeRepository {
 		return Optional.of(results.get(0));
 	}
 
+	@Cacheable(cacheNames = "postalCodeRepository.get-by-zip-code")
 	@Override
 	public PostalCode getByZipCode(String zipCode) {
 		return this.findByZipCode(zipCode).orElseThrow(() -> new PostalCodeNotFoundException(zipCode));

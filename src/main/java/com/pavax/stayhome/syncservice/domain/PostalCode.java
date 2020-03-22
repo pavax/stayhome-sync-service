@@ -10,7 +10,6 @@ public class PostalCode {
 
 	private String npa;
 
-
 	public String getId() {
 		return id;
 	}

@@ -13,3 +13,9 @@ services:
     expose:
       - 8080
     restart: always
+    networks:
+      - stayhome_default
+
+networks:
+  stayhome_default:
+    external: True

@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  sync-app:
+    build: .
+    container_name: sync-app
+    environment:
+      - STAYHOME_API_URL=${STAYHOME_API_URL}
+      - STAYHOME_API_TOKEN=${STAYHOME_API_TOKEN}
+    expose:
+      - 8080
+    restart: always

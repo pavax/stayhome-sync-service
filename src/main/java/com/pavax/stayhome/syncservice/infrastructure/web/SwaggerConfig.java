@@ -4,7 +4,6 @@ import static springfox.documentation.builders.PathSelectors.regex;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Collections;
 
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;

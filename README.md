@@ -2,6 +2,12 @@
 ##Sync Service
 
 
+# Example
+
+    ```
+    curl -X POST "http://localhost:8080/api/business-entry/" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"categories\": [ \"A\", \"B\" ], \"delivery\": \"Bern, Köniz, Wabern, Liebefeld\", \"description\": \"Lorem Ipsum\", \"email\": \"test@example.com\", \"id\": \"1234\", \"name\": \"test company\", \"phone\": \"\", \"providerName\": \"datasource-xy\", \"website\": \"http://www.example.com\", \"zipCode\": \"3000\"}"
+    ```
+
 ## Start Service using Docker
 
 1. Clone the code from GitHub

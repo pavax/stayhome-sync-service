@@ -5,6 +5,9 @@ services:
     build: .
     container_name: sync-app
     environment:
+      - LETSENCRYPT_HOST=sync-api.stayhome.ch
+      - VIRTUAL_HOST=sync-api.stayhome.ch
+      - VIRTUAL_PORT=8080
       - STAYHOME_API_URL=${STAYHOME_API_URL}
       - STAYHOME_API_TOKEN=${STAYHOME_API_TOKEN}
     expose:

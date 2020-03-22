@@ -52,7 +52,7 @@ public class BusinessRequestSyncService {
 	}
 
 	private String extractCorrelationId(BusinessEntryDto businessEntryDto) {
-		return businessEntryDto.getId() + businessEntryDto.getProviderName();
+		return String.format("%s-%s", businessEntryDto.getProviderName(), businessEntryDto.getId());
 	}
 
 }
